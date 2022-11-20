@@ -1,0 +1,22 @@
+// file generated with CMAKE
+//
+// DO NOT EDIT!
+//
+
+namespace app
+{
+const char* get_app_name()
+{
+    return "@APP_NAME@";
+}
+const char* get_app_version()
+{
+    return "@APP_VERSION@";
+}
+
+const char* get_compile_date()
+{
+    return __DATE__;
+}
+
+} // namespace app
