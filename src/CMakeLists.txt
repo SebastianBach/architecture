@@ -1,0 +1,7 @@
+add_subdirectory(util)
+add_subdirectory(app_info)
+add_subdirectory(core)
+add_subdirectory(features)
+add_subdirectory(ui)
+add_subdirectory(products)
+add_subdirectory(tests)

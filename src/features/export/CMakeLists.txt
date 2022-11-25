@@ -1,0 +1,5 @@
+add_library(lib_exports OBJECT)
+target_sources(lib_exports PRIVATE export_png.cpp)
+target_link_libraries(lib_exports PRIVATE Qt5::Widgets)
+target_link_libraries(lib_exports PRIVATE lib_qt_image_utils)
+target_link_libraries(lib_exports PRIVATE lib_core lib_image)

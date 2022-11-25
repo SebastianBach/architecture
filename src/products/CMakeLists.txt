@@ -1,0 +1,6 @@
+add_subdirectory(product_utils)
+add_subdirectory(cmdl)
+add_subdirectory(product)
+add_subdirectory(deluxe)
+add_subdirectory(mini)
+add_subdirectory(intern)

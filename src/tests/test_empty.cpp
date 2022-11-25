@@ -14,10 +14,7 @@ TEST(TestEmpty, Empty)
     }
     {
         const auto& conf = core::get_config();
-        ASSERT_TRUE(conf.appCommands.empty());
-        ASSERT_TRUE(conf.buttons.empty());
         ASSERT_TRUE(conf.macros.empty());
-        ASSERT_TRUE(conf.menu.empty());
     }
     {
         ASSERT_STREQ(core::get_label("cmd.abc"), "???");

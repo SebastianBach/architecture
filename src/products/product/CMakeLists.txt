@@ -1,0 +1,17 @@
+add_executable(app_product)
+make_generic_app("The Product" ${PRODUCT_VERSION} "product_standard" config_product.cpp app_product)
+use_qt_ui(app_product)
+target_link_libraries(app_product PRIVATE lib_cmd_colors)
+target_link_libraries(app_product PRIVATE lib_cmd_filters)
+target_link_libraries(app_product PRIVATE lib_cmd_random)
+target_link_libraries(app_product PRIVATE lib_cmd_pattern)
+target_link_libraries(app_product PRIVATE lib_exports)
+
+add_executable(app_product_demo)
+make_generic_app("The Product - Demo Version" ${PRODUCT_VERSION} "product_demo" config_product.cpp app_product_demo)
+use_qt_ui(app_product_demo)
+target_link_libraries(app_product_demo PRIVATE lib_cmd_colors)
+target_link_libraries(app_product_demo PRIVATE lib_cmd_filters)
+target_link_libraries(app_product_demo PRIVATE lib_cmd_random)
+target_link_libraries(app_product_demo PRIVATE lib_cmd_pattern)
+# No exporters available

@@ -1,0 +1,2 @@
+add_library(lib_product_utils INTERFACE)
+target_include_directories(lib_product_utils INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

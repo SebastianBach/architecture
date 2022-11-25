@@ -1,0 +1,6 @@
+add_subdirectory(cmd_colors)
+add_subdirectory(cmd_dev)
+add_subdirectory(cmd_filters)
+add_subdirectory(cmd_noise)
+add_subdirectory(cmd_pattern)
+add_subdirectory(export)
