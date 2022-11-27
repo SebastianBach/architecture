@@ -7,3 +7,7 @@ target_sources(lib_core PRIVATE
         exports.cpp)
 
 target_include_directories(lib_core PUBLIC   ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(MSVC)
+    target_compile_options(lib_core PRIVATE /W4 /WX)
+endif()

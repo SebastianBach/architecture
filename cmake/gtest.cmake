@@ -1,4 +1,5 @@
 # see https://google.github.io/googletest/quickstart-cmake.html
+# https://cliutils.gitlab.io/modern-cmake/chapters/testing/googletest.html
 
 include(FetchContent)
 FetchContent_Declare(

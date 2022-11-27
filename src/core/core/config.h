@@ -106,13 +106,13 @@ struct Config
 };
 
 template <typename T>
-void make_generic_button(T& cmd, const char* label, Config& c)
+void make_generic_button(const T& cmd, const char* label, Config& c)
 {
     c.generic_buttons.push_back({cmd, label});
 }
 
 template <typename T>
-void add_to_menu(T& cmd, const char* label, generic_menu_element& menu)
+void add_to_menu(const T& cmd, const char* label, generic_menu_element& menu)
 {
     menu.commands.push_back({cmd, label});
 }

@@ -14,7 +14,8 @@ struct ExportIDCmp
 
 auto& get_exporters()
 {
-    static std::map<core::ExportID, core::ExportFunction, ExportIDCmp> exporters;
+    static std::map<core::ExportID, core::ExportFunction, ExportIDCmp>
+        exporters;
     return exporters;
 }
 
@@ -39,13 +40,27 @@ void get_export_formats(std::vector<ExportID>& ids)
 
 ReturnVoid export_image(ExportID id, const char* path, image::Image& img)
 {
+    if (path == nullptr)
+        return Error{"Invalid path argument.", core::Error::TYPE::INVALID_ARG};
+
     const auto& exporters = get_exporters();
-    auto it               = exporters.find(id);
+
+    if (exporters.empty())
+        return Error{"No export formats available.",
+                     core::Error::TYPE::INVALID_STATE};
+
+    auto it = exporters.find(id);
 
     if (it == exporters.end())
         return Error{"Exporter ID not found.", core::Error::TYPE::INVALID_ARG};
 
-    return it->second(path, img);
+    auto& func = it->second;
+
+    if (!func)
+        return Error{"Invalid export function.",
+                     core::Error::TYPE::INVALID_STATE};
+
+    return func(path, img);
 }
 
 } // namespace core

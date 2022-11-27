@@ -2,7 +2,7 @@
 #include "image_util.h"
 #include "utility.h"
 
-DisplayWidget::DisplayWidget(QWidget* parent) {}
+DisplayWidget::DisplayWidget(QWidget*) {}
 
 void DisplayWidget::drawImage(const image::Image& img)
 {
@@ -10,7 +10,7 @@ void DisplayWidget::drawImage(const image::Image& img)
     repaint();
 }
 
-void DisplayWidget::paintEvent(QPaintEvent* event)
+void DisplayWidget::paintEvent(QPaintEvent*)
 {
     QPainter painter(this);
     painter.setPen(Qt::NoPen);

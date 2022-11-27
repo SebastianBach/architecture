@@ -24,6 +24,7 @@ void create_config(Config& c)
         add_to_menu(CommandID{"totally.invalid.id"}, "Invalid Command", dev);
         add_to_menu(AppCommandID{"totally.invalid.id"}, "Invalid App Command",
                     dev);
+        add_to_menu(ExportID{"totally.invalid.id", ""}, "Invalid Export", dev);
         add_to_menu(AppCommandID{"app.cmd.redraw"}, "Redraw", dev);
         c.generic_menus.push_back(dev);
     }

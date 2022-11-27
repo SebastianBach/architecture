@@ -56,12 +56,15 @@ inline void fill_export_formats(Config& c)
 
 inline void fill_filters(Config& c)
 {
-    generic_menu_element filters;
-    filters.name = "Filters";
-
     // search for filters
     std::vector<core::CommandID> ids;
     core::get_commands(ids, "cmd.filter.");
+
+    if (ids.empty())
+        return;
+
+    generic_menu_element filters;
+    filters.name = "Filters";
 
     for (auto& id : ids)
         add_to_menu(id, get_label(id._id), filters);

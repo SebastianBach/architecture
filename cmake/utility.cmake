@@ -26,6 +26,10 @@ function(make_generic_app TargetName TargetVersion TargetBinary config_file TARG
     target_link_libraries(${TARGET} PRIVATE lib_image)
     target_link_libraries(${TARGET} PRIVATE lib_product_utils)
 
+    if(MSVC)
+        target_compile_options(${TARGET} PRIVATE /W4 /WX)
+    endif()
+
 endfunction()
 
 

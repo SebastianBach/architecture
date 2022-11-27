@@ -15,3 +15,6 @@ target_link_libraries(app_product_demo PRIVATE lib_cmd_filters)
 target_link_libraries(app_product_demo PRIVATE lib_cmd_random)
 target_link_libraries(app_product_demo PRIVATE lib_cmd_pattern)
 # No exporters available
+
+add_test(test_product "product_standard" "test")
+add_test(test_product_demo "product_demo" "test")

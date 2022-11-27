@@ -19,10 +19,6 @@ core::ReturnVoid export_png(const char* file, image::Image& img)
     return core::SUCCESS;
 }
 
-} // namespace
-
-namespace
-{
 static const auto res = []()
 {
     core::add_export(core::ExportID{"export.png", "png"}, export_png);

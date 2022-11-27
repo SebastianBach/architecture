@@ -36,3 +36,7 @@ set_target_properties(lib_exports PROPERTIES FOLDER "features")
 set_target_properties(lib_ui_app PROPERTIES FOLDER "ui")
 
 set_target_properties(unit_tests_basics PROPERTIES FOLDER "unit tests")
+set_target_properties(gtest PROPERTIES FOLDER "unit tests")
+set_target_properties(gtest_main PROPERTIES FOLDER "unit tests")
+set_target_properties(gmock PROPERTIES FOLDER "unit tests")
+set_target_properties(gmock_main PROPERTIES FOLDER "unit tests")

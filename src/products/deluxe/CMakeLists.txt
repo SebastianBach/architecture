@@ -6,3 +6,5 @@ target_link_libraries(app_product_deluxe PRIVATE lib_cmd_filters)
 target_link_libraries(app_product_deluxe PRIVATE lib_cmd_random)
 target_link_libraries(app_product_deluxe PRIVATE lib_cmd_pattern)
 target_link_libraries(app_product_deluxe PRIVATE lib_exports)
+
+add_test(test_product_deluxe "product_deluxe" "test")

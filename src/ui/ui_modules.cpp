@@ -1,6 +1,7 @@
 #include "ui_modules.h"
 #include <algorithm>
 #include <vector>
+#include "app.h"
 
 namespace
 {
@@ -32,13 +33,13 @@ bool add_ui_module(unsigned int order, UI_MODULE_FUNC f)
     return true;
 }
 
-void create_ui_modules(MainWindow* window, QMenuBar* bar, QGridLayout* buttons, const core::Config& config)
+void create_ui_modules(app::App*app,MainWindow* window, QMenuBar* bar, QGridLayout* buttons, const core::Config& config)
 {
     auto& modules = get_ui_modules();
 
     std::sort(modules.begin(), modules.end(), before());
 
-    window_data w{window, bar, buttons, config};
+    window_data w{app, window, bar, buttons, config};
 
     for (auto& m : modules)
         m.func(w);

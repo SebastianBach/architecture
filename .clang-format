@@ -13,6 +13,7 @@ SortIncludes:    true
 AccessModifierOffset: -4
 MaxEmptyLinesToKeep: 1
 AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
 
 BreakBeforeBraces: Allman
 BraceWrapping:   
